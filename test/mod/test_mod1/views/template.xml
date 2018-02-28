@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="test_from" model="ir.ui.view">
+            <field name="name">Abc</field>
+            <field name="model">new_module.new_module</field>
+            <field name="arch" type="xml">
+                <form string="Testing From">
+                    <sheet>
+
+                        <group name="group_top">
+
+                            <group name="group_left">
+                                <field name="name"/>
+                            </group>
+
+                            <group name="group_right">
+                                <field name="date"/>
+                            </group>
+
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="test_act" model="ir.actions.act_window">
+            <field name="name">Abc</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">new_module.new_module</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p><p>
+                <!-- More details about what a user can do with this object will be OK -->
+            </p>
+            </field>
+        </record>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="test_menu" name="Abc Menu" parent="" action="test_act" sequence="0"/>
+    </data>
+</odoo>
